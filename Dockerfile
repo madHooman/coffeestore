@@ -26,8 +26,9 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 # Copy project files into the container
 COPY . .
 
-# Install PHP dependencies
-RUN composer install --no-dev --optimize-autoloader
+# Install PHP dependencies safely (allow root)
+RUN COMPOSER_ALLOW_SUPERUSER=1 composer install --no-dev --optimize-autoloader \
+    && php artisan key:generate || true
 
 # Set permissions for Laravel
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
