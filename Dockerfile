@@ -1,5 +1,5 @@
-# Base image: PHP 8.2 + Apache
-FROM php:8.2-apache
+# Base image: PHP 7.4 + Apache
+FROM php:7.4-apache
 
 # Set working directory
 WORKDIR /var/www/html
@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     && docker-php-ext-install pdo_mysql mbstring zip exif pcntl bcmath gd
 
-# Enable Apache mod_rewrite (Laravel routes)
+# Enable Apache mod_rewrite (for Laravel routes)
 RUN a2enmod rewrite
 
 # Install Composer (latest stable)
