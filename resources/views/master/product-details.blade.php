@@ -365,424 +365,430 @@
 
             <!-- ALL COMMENTS -->
             <ul class="lg:w-3/4 flex flex-col gap-y-2 child:w-full">
-                <!-- COMMENT ITEMS -->
-                <li
-                    class="child:flex py-4 border-b border-gray-200 child:border-white/20"
-                >
-                    <!-- TITLE -->
-                    <div class="flex items-center gap-x-2">
-                        <h2 class="font-DanaMedium text-lg mb-1">
-                            عطر و طعم قهوه عالی
-                        </h2>
-                        <span
-                            class="px-2 py-1 mb-2 rounded-lg bg-green-500 text-white text-xs"
-                        >خریدار</span
-                        >
-                    </div>
-                    <!-- COOMENT TEXT -->
-                    <div class="flex-col">
-                        <h2
-                            class="flex items-center gap-x-1 text-green-500 mb-4"
-                        >
-                            <svg class="w-4 h-4">
-                                <use href="#hand-up"></use>
-                            </svg>
-                            پیشنهاد میشود
-                        </h2>
-                        <p
-                            class="text-gray-500 dark:text-gray-200 mb-2 line-clamp-2"
-                        >
-                            عالی از هر لحاظ به شدت خریدش رو توصیه میکنم
-                            کیفیت محصول خوب بود بسته بندی عالی بود
-                        </p>
-                    </div>
-                    <!-- COMMENT FOOTER -->
-                    <div
-                        class="mt-2 lg:mt-0 flex-col lg:flex-row gap-y-2 lg:items-center justify-between"
+                @foreach($comments as  $comment)
+                    <li
+                        class="child:flex py-4 border-b border-gray-200 child:border-white/20"
                     >
-                        <div
-                            class="flex items-center gap-x-4 text-gray-400 text-sm"
-                        >
-                            <p>11 بهمن 1402</p>
-                            <p>امیررضا کریمی</p>
+                        <!-- TITLE -->
+                        <div class="flex items-center gap-x-2">
+                            <h2 class="font-DanaMedium text-lg mb-1">
+                                {{$comment->tittle}}                            </h2>
+                            <span
+                                class="px-2 py-1 mb-2 rounded-lg bg-green-500 text-white text-xs">خریدار</span>
                         </div>
-                        <div
-                            class="flex items-center gap-x-2 flex-wrap mt-2"
-                        >
-                            <p class="text-gray-400 text-sm">
-                                آیا این دیدگاه برایتان مفید بود؟
-                            </p>
-                            <div
-                                class="flex items-center gap-x-2 child:flex child:items-center child:gap-x-1 child:rounded-lg child:p-2 child:font-DanaMedium child:duration-300 child:transition-all child:text-sm"
+                        <!-- COOMENT TEXT -->
+                        <div class="flex-col">
+                            <h2
+                                class="flex items-center gap-x-1 text-green-500 mb-4"
                             >
-                                <button
-                                    class="text-green-600 ring-transparent ring-1 focus:ring-green-600 dark:focus:ring-green-600"
-                                >
-                                    78
-                                    <svg class="w-4 h-4">
-                                        <use href="#hand-up"></use>
-                                    </svg>
-                                </button>
-                                <button
-                                    class="text-red-500 ring-transparent ring-1 focus:ring-[#EF4343] dark:focus:ring-[#EF4343]"
-                                >
-                                    25
-                                    <svg class="w-4 h-4">
-                                        <use href="#hand-down"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <!-- COMMENT ITEMS -->
-                <li
-                    class="child:flex py-4 border-b border-gray-200 child:border-white/20"
-                >
-                    <!-- TITLE -->
-                    <div class="flex items-center gap-x-2">
-                        <h2 class="font-DanaMedium text-lg mb-1">
-                            بسته بندی خوب نبود
-                        </h2>
-                        <span
-                            class="px-2 py-1 mb-2 rounded-lg bg-green-500 text-white text-xs"
-                        >خریدار</span
-                        >
-                    </div>
-                    <!-- COOMENT TEXT -->
-                    <div class="flex-col">
-                        <h2
-                            class="flex items-center gap-x-1 text-red-500 mb-4"
-                        >
-                            <svg class="w-4 h-4">
-                                <use href="#hand-down"></use>
-                            </svg>
-                            پیشنهاد نمیشود
-                        </h2>
-                        <p
-                            class="text-gray-500 dark:text-gray-200 mb-2"
-                        >
-                            بسته بندی محصول ایراد داشت.
-                        </p>
-                    </div>
-                    <!-- COMMENT FOOTER -->
-                    <div
-                        class="mt-2 lg:mt-0 flex-col lg:flex-row gap-y-2 lg:items-center justify-between"
-                    >
-                        <div
-                            class="flex items-center gap-x-4 text-gray-400 text-sm"
-                        >
-                            <p>12 بهمن 1402</p>
-                            <p>علی محمدی</p>
-                        </div>
-                        <div
-                            class="flex items-center gap-x-2 flex-wrap mt-2"
-                        >
-                            <p class="text-gray-400 text-sm">
-                                آیا این دیدگاه برایتان مفید بود؟
-                            </p>
-                            <div
-                                class="flex items-center gap-x-2 child:flex child:items-center child:gap-x-1 child:rounded-lg child:p-2 child:font-DanaMedium child:duration-300 child:transition-all child:text-sm"
+                                <svg class="w-4 h-4">
+                                    <use href="#hand-up"></use>
+                                </svg>
+                                پیشنهاد میشود
+                            </h2>
+                            <p
+                                class="text-gray-500 dark:text-gray-200 mb-2 line-clamp-2"
                             >
-                                <button
-                                    class="text-green-600 ring-transparent ring-1 focus:ring-green-600 dark:focus:ring-green-600"
-                                >
-                                    4
-                                    <svg class="w-4 h-4">
-                                        <use href="#hand-up"></use>
-                                    </svg>
-                                </button>
-                                <button
-                                    class="text-red-500 ring-transparent ring-1 focus:ring-[#EF4343] dark:focus:ring-[#EF4343]"
-                                >
-                                    15
-                                    <svg class="w-4 h-4">
-                                        <use href="#hand-down"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <!-- COMMENT ITEMS -->
-                <li
-                    class="child:flex py-4 border-b border-gray-200 child:border-white/20"
-                >
-                    <!-- TITLE -->
-                    <div class="flex items-center gap-x-2">
-                        <h2 class="font-DanaMedium text-lg mb-1">
-                            برشته و تازه بود
-                        </h2>
-                        <span
-                            class="px-2 py-1 mb-2 rounded-lg bg-green-500 text-white text-xs"
-                        >خریدار</span
-                        >
-                    </div>
-                    <!-- COOMENT TEXT -->
-                    <div class="flex-col">
-                        <h2
-                            class="flex items-center gap-x-1 text-green-500 mb-4"
-                        >
-                            <svg class="w-4 h-4">
-                                <use href="#hand-up"></use>
-                            </svg>
-                            پیشنهاد میشود
-                        </h2>
-                        <p
-                            class="text-gray-500 dark:text-gray-200 mb-2"
-                        >
-                            کیفیت محصول عالیه
-                        </p>
-                    </div>
-                    <!-- COMMENT FOOTER -->
-                    <div
-                        class="mt-2 lg:mt-0 flex-col lg:flex-row gap-y-2 lg:items-center justify-between"
-                    >
-                        <div
-                            class="flex items-center gap-x-4 text-gray-400 text-sm"
-                        >
-                            <p>1 بهمن 1402</p>
-                            <p>محمد صفدری</p>
-                        </div>
-                        <div
-                            class="flex items-center gap-x-2 flex-wrap mt-2"
-                        >
-                            <p class="text-gray-400 text-sm">
-                                آیا این دیدگاه برایتان مفید بود؟
-                            </p>
-                            <div
-                                class="flex items-center gap-x-2 child:flex child:items-center child:gap-x-1 child:rounded-lg child:p-2 child:font-DanaMedium child:duration-300 child:transition-all child:text-sm"
-                            >
-                                <button
-                                    class="text-green-600 ring-transparent ring-1 focus:ring-green-600 dark:focus:ring-green-600"
-                                >
-                                    7
-                                    <svg class="w-4 h-4">
-                                        <use href="#hand-up"></use>
-                                    </svg>
-                                </button>
-                                <button
-                                    class="text-red-500 ring-transparent ring-1 focus:ring-[#EF4343] dark:focus:ring-[#EF4343]"
-                                >
-                                    5
-                                    <svg class="w-4 h-4">
-                                        <use href="#hand-down"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </li>
+                                {{$comment->description}}
 
-                <!-- HIDDEN COMMENTS -->
-                <!-- COMMENT ITEMS -->
-                <li
-                    class="hidden-comment-item hidden child:flex py-4 border-b border-gray-200 child:border-white/20"
-                >
-                    <!-- TITLE -->
-                    <div class="flex items-center gap-x-2">
-                        <h2 class="font-DanaMedium text-lg mb-1">
-                            عطر و طعم قهوه عالی
-                        </h2>
-                        <span
-                            class="px-2 py-1 mb-2 rounded-lg bg-green-500 text-white text-xs"
-                        >خریدار</span
-                        >
-                    </div>
-                    <!-- COOMENT TEXT -->
-                    <div class="flex-col">
-                        <h2
-                            class="flex items-center gap-x-1 text-green-500 mb-4"
-                        >
-                            <svg class="w-4 h-4">
-                                <use href="#hand-up"></use>
-                            </svg>
-                            پیشنهاد میشود
-                        </h2>
-                        <p
-                            class="text-gray-500 dark:text-gray-200 mb-2 line-clamp-2"
-                        >
-                            عالی از هر لحاظ به شدت خریدش رو توصیه میکنم
-                            کیفیت محصول خوب بود بسته بندی عالی بود
-                        </p>
-                    </div>
-                    <!-- COMMENT FOOTER -->
-                    <div
-                        class="mt-2 lg:mt-0 flex-col lg:flex-row gap-y-2 lg:items-center justify-between"
-                    >
-                        <div
-                            class="flex items-center gap-x-4 text-gray-400 text-sm"
-                        >
-                            <p>11 بهمن 1402</p>
-                            <p>امیررضا کریمی</p>
-                        </div>
-                        <div
-                            class="flex items-center gap-x-2 flex-wrap mt-2"
-                        >
-                            <p class="text-gray-400 text-sm">
-                                آیا این دیدگاه برایتان مفید بود؟
                             </p>
+                        </div>
+                        <!-- COMMENT FOOTER -->
+                        <div
+                            class="mt-2 lg:mt-0 flex-col lg:flex-row gap-y-2 lg:items-center justify-between"
+                        >
                             <div
-                                class="flex items-center gap-x-2 child:flex child:items-center child:gap-x-1 child:rounded-lg child:p-2 child:font-DanaMedium child:duration-300 child:transition-all child:text-sm"
+                                class="flex items-center gap-x-4 text-gray-400 text-sm"
                             >
-                                <button
-                                    class="text-green-600 ring-transparent ring-1 focus:ring-green-600 dark:focus:ring-green-600"
+                                <p>11 بهمن 1402</p>
+                                <p>                                {{$comment->user_name}}
+                                </p>
+                            </div>
+                            <div
+                                class="flex items-center gap-x-2 flex-wrap mt-2"
+                            >
+                                <p class="text-gray-400 text-sm">
+                                    آیا این دیدگاه برایتان مفید بود؟
+                                </p>
+                                <div
+                                    class="flex items-center gap-x-2 child:flex child:items-center child:gap-x-1 child:rounded-lg child:p-2 child:font-DanaMedium child:duration-300 child:transition-all child:text-sm"
                                 >
-                                    78
-                                    <svg class="w-4 h-4">
-                                        <use href="#hand-up"></use>
-                                    </svg>
-                                </button>
-                                <button
-                                    class="text-red-500 ring-transparent ring-1 focus:ring-[#EF4343] dark:focus:ring-[#EF4343]"
-                                >
-                                    25
-                                    <svg class="w-4 h-4">
-                                        <use href="#hand-down"></use>
-                                    </svg>
-                                </button>
+                                    <button
+                                        class="text-green-600 ring-transparent ring-1 focus:ring-green-600 dark:focus:ring-green-600"
+                                    >
+                                        78
+                                        <svg class="w-4 h-4">
+                                            <use href="#hand-up"></use>
+                                        </svg>
+                                    </button>
+                                    <button
+                                        class="text-red-500 ring-transparent ring-1 focus:ring-[#EF4343] dark:focus:ring-[#EF4343]"
+                                    >
+                                        25
+                                        <svg class="w-4 h-4">
+                                            <use href="#hand-down"></use>
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </li>
+                    </li>
+
+                @endforeach
+
+
+
+
+
                 <!-- COMMENT ITEMS -->
-                <li
-                    class="hidden-comment-item hidden child:flex py-4 border-b border-gray-200 child:border-white/20"
-                >
-                    <!-- TITLE -->
-                    <div class="flex items-center gap-x-2">
-                        <h2 class="font-DanaMedium text-lg mb-1">
-                            بسته بندی خوب نبود
-                        </h2>
-                        <span
-                            class="px-2 py-1 mb-2 rounded-lg bg-green-500 text-white text-xs"
-                        >خریدار</span
-                        >
-                    </div>
-                    <!-- COOMENT TEXT -->
-                    <div class="flex-col">
-                        <h2
-                            class="flex items-center gap-x-1 text-red-500 mb-4"
-                        >
-                            <svg class="w-4 h-4">
-                                <use href="#hand-down"></use>
-                            </svg>
-                            پیشنهاد نمیشود
-                        </h2>
-                        <p
-                            class="text-gray-500 dark:text-gray-200 mb-2"
-                        >
-                            بسته بندی محصول ایراد داشت.
-                        </p>
-                    </div>
-                    <!-- COMMENT FOOTER -->
-                    <div
-                        class="mt-2 lg:mt-0 flex-col lg:flex-row gap-y-2 lg:items-center justify-between"
-                    >
-                        <div
-                            class="flex items-center gap-x-4 text-gray-400 text-sm"
-                        >
-                            <p>12 بهمن 1402</p>
-                            <p>علی محمدی</p>
-                        </div>
-                        <div
-                            class="flex items-center gap-x-2 flex-wrap mt-2"
-                        >
-                            <p class="text-gray-400 text-sm">
-                                آیا این دیدگاه برایتان مفید بود؟
-                            </p>
-                            <div
-                                class="flex items-center gap-x-2 child:flex child:items-center child:gap-x-1 child:rounded-lg child:p-2 child:font-DanaMedium child:duration-300 child:transition-all child:text-sm"
-                            >
-                                <button
-                                    class="text-green-600 ring-transparent ring-1 focus:ring-green-600 dark:focus:ring-green-600"
-                                >
-                                    4
-                                    <svg class="w-4 h-4">
-                                        <use href="#hand-up"></use>
-                                    </svg>
-                                </button>
-                                <button
-                                    class="text-red-500 ring-transparent ring-1 focus:ring-[#EF4343] dark:focus:ring-[#EF4343]"
-                                >
-                                    15
-                                    <svg class="w-4 h-4">
-                                        <use href="#hand-down"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </li>
                 <!-- COMMENT ITEMS -->
-                <li
-                    class="hidden-comment-item hidden child:flex py-4 border-b border-gray-200 child:border-white/20"
-                >
-                    <!-- TITLE -->
-                    <div class="flex items-center gap-x-2">
-                        <h2 class="font-DanaMedium text-lg mb-1">
-                            برشته و تازه بود
-                        </h2>
-                        <span
-                            class="px-2 py-1 mb-2 rounded-lg bg-green-500 text-white text-xs"
-                        >خریدار</span
-                        >
-                    </div>
-                    <!-- COOMENT TEXT -->
-                    <div class="flex-col">
-                        <h2
-                            class="flex items-center gap-x-1 text-green-500 mb-4"
-                        >
-                            <svg class="w-4 h-4">
-                                <use href="#hand-up"></use>
-                            </svg>
-                            پیشنهاد میشود
-                        </h2>
-                        <p
-                            class="text-gray-500 dark:text-gray-200 mb-2"
-                        >
-                            کیفیت محصول عالیه
-                        </p>
-                    </div>
-                    <!-- COMMENT FOOTER -->
-                    <div
-                        class="mt-2 lg:mt-0 flex-col lg:flex-row gap-y-2 lg:items-center justify-between"
-                    >
-                        <div
-                            class="flex items-center gap-x-4 text-gray-400 text-sm"
-                        >
-                            <p>1 بهمن 1402</p>
-                            <p>محمد صفدری</p>
-                        </div>
-                        <div
-                            class="flex items-center gap-x-2 flex-wrap mt-2"
-                        >
-                            <p class="text-gray-400 text-sm">
-                                آیا این دیدگاه برایتان مفید بود؟
-                            </p>
-                            <div
-                                class="flex items-center gap-x-2 child:flex child:items-center child:gap-x-1 child:rounded-lg child:p-2 child:font-DanaMedium child:duration-300 child:transition-all child:text-sm"
-                            >
-                                <button
-                                    class="text-green-600 ring-transparent ring-1 focus:ring-green-600 dark:focus:ring-green-600"
-                                >
-                                    7
-                                    <svg class="w-4 h-4">
-                                        <use href="#hand-up"></use>
-                                    </svg>
-                                </button>
-                                <button
-                                    class="text-red-500 ring-transparent ring-1 focus:ring-[#EF4343] dark:focus:ring-[#EF4343]"
-                                >
-                                    5
-                                    <svg class="w-4 h-4">
-                                        <use href="#hand-down"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </li>
+{{--                <li--}}
+{{--                    class="child:flex py-4 border-b border-gray-200 child:border-white/20"--}}
+{{--                >--}}
+{{--                    <!-- TITLE -->--}}
+{{--                    <div class="flex items-center gap-x-2">--}}
+{{--                        <h2 class="font-DanaMedium text-lg mb-1">--}}
+{{--                            بسته بندی خوب نبود--}}
+{{--                        </h2>--}}
+{{--                        <span--}}
+{{--                            class="px-2 py-1 mb-2 rounded-lg bg-green-500 text-white text-xs"--}}
+{{--                        >خریدار</span--}}
+{{--                        >--}}
+{{--                    </div>--}}
+{{--                    <!-- COOMENT TEXT -->--}}
+{{--                    <div class="flex-col">--}}
+{{--                        <h2--}}
+{{--                            class="flex items-center gap-x-1 text-red-500 mb-4"--}}
+{{--                        >--}}
+{{--                            <svg class="w-4 h-4">--}}
+{{--                                <use href="#hand-down"></use>--}}
+{{--                            </svg>--}}
+{{--                            پیشنهاد نمیشود--}}
+{{--                        </h2>--}}
+{{--                        <p--}}
+{{--                            class="text-gray-500 dark:text-gray-200 mb-2"--}}
+{{--                        >--}}
+{{--                            بسته بندی محصول ایراد داشت.--}}
+{{--                        </p>--}}
+{{--                    </div>--}}
+{{--                    <!-- COMMENT FOOTER -->--}}
+{{--                    <div--}}
+{{--                        class="mt-2 lg:mt-0 flex-col lg:flex-row gap-y-2 lg:items-center justify-between"--}}
+{{--                    >--}}
+{{--                        <div--}}
+{{--                            class="flex items-center gap-x-4 text-gray-400 text-sm"--}}
+{{--                        >--}}
+{{--                            <p>12 بهمن 1402</p>--}}
+{{--                            <p>علی محمدی</p>--}}
+{{--                        </div>--}}
+{{--                        <div--}}
+{{--                            class="flex items-center gap-x-2 flex-wrap mt-2"--}}
+{{--                        >--}}
+{{--                            <p class="text-gray-400 text-sm">--}}
+{{--                                آیا این دیدگاه برایتان مفید بود؟--}}
+{{--                            </p>--}}
+{{--                            <div--}}
+{{--                                class="flex items-center gap-x-2 child:flex child:items-center child:gap-x-1 child:rounded-lg child:p-2 child:font-DanaMedium child:duration-300 child:transition-all child:text-sm"--}}
+{{--                            >--}}
+{{--                                <button--}}
+{{--                                    class="text-green-600 ring-transparent ring-1 focus:ring-green-600 dark:focus:ring-green-600"--}}
+{{--                                >--}}
+{{--                                    4--}}
+{{--                                    <svg class="w-4 h-4">--}}
+{{--                                        <use href="#hand-up"></use>--}}
+{{--                                    </svg>--}}
+{{--                                </button>--}}
+{{--                                <button--}}
+{{--                                    class="text-red-500 ring-transparent ring-1 focus:ring-[#EF4343] dark:focus:ring-[#EF4343]"--}}
+{{--                                >--}}
+{{--                                    15--}}
+{{--                                    <svg class="w-4 h-4">--}}
+{{--                                        <use href="#hand-down"></use>--}}
+{{--                                    </svg>--}}
+{{--                                </button>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </li>--}}
+{{--                <!-- COMMENT ITEMS -->--}}
+{{--                <li--}}
+{{--                    class="child:flex py-4 border-b border-gray-200 child:border-white/20"--}}
+{{--                >--}}
+{{--                    <!-- TITLE -->--}}
+{{--                    <div class="flex items-center gap-x-2">--}}
+{{--                        <h2 class="font-DanaMedium text-lg mb-1">--}}
+{{--                            برشته و تازه بود--}}
+{{--                        </h2>--}}
+{{--                        <span--}}
+{{--                            class="px-2 py-1 mb-2 rounded-lg bg-green-500 text-white text-xs"--}}
+{{--                        >خریدار</span--}}
+{{--                        >--}}
+{{--                    </div>--}}
+{{--                    <!-- COOMENT TEXT -->--}}
+{{--                    <div class="flex-col">--}}
+{{--                        <h2--}}
+{{--                            class="flex items-center gap-x-1 text-green-500 mb-4"--}}
+{{--                        >--}}
+{{--                            <svg class="w-4 h-4">--}}
+{{--                                <use href="#hand-up"></use>--}}
+{{--                            </svg>--}}
+{{--                            پیشنهاد میشود--}}
+{{--                        </h2>--}}
+{{--                        <p--}}
+{{--                            class="text-gray-500 dark:text-gray-200 mb-2"--}}
+{{--                        >--}}
+{{--                            کیفیت محصول عالیه--}}
+{{--                        </p>--}}
+{{--                    </div>--}}
+{{--                    <!-- COMMENT FOOTER -->--}}
+{{--                    <div--}}
+{{--                        class="mt-2 lg:mt-0 flex-col lg:flex-row gap-y-2 lg:items-center justify-between"--}}
+{{--                    >--}}
+{{--                        <div--}}
+{{--                            class="flex items-center gap-x-4 text-gray-400 text-sm"--}}
+{{--                        >--}}
+{{--                            <p>1 بهمن 1402</p>--}}
+{{--                            <p>محمد صفدری</p>--}}
+{{--                        </div>--}}
+{{--                        <div--}}
+{{--                            class="flex items-center gap-x-2 flex-wrap mt-2"--}}
+{{--                        >--}}
+{{--                            <p class="text-gray-400 text-sm">--}}
+{{--                                آیا این دیدگاه برایتان مفید بود؟--}}
+{{--                            </p>--}}
+{{--                            <div--}}
+{{--                                class="flex items-center gap-x-2 child:flex child:items-center child:gap-x-1 child:rounded-lg child:p-2 child:font-DanaMedium child:duration-300 child:transition-all child:text-sm"--}}
+{{--                            >--}}
+{{--                                <button--}}
+{{--                                    class="text-green-600 ring-transparent ring-1 focus:ring-green-600 dark:focus:ring-green-600"--}}
+{{--                                >--}}
+{{--                                    7--}}
+{{--                                    <svg class="w-4 h-4">--}}
+{{--                                        <use href="#hand-up"></use>--}}
+{{--                                    </svg>--}}
+{{--                                </button>--}}
+{{--                                <button--}}
+{{--                                    class="text-red-500 ring-transparent ring-1 focus:ring-[#EF4343] dark:focus:ring-[#EF4343]"--}}
+{{--                                >--}}
+{{--                                    5--}}
+{{--                                    <svg class="w-4 h-4">--}}
+{{--                                        <use href="#hand-down"></use>--}}
+{{--                                    </svg>--}}
+{{--                                </button>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </li>--}}
+
+{{--                <!-- HIDDEN COMMENTS -->--}}
+{{--                <!-- COMMENT ITEMS -->--}}
+{{--                <li--}}
+{{--                    class="hidden-comment-item hidden child:flex py-4 border-b border-gray-200 child:border-white/20"--}}
+{{--                >--}}
+{{--                    <!-- TITLE -->--}}
+{{--                    <div class="flex items-center gap-x-2">--}}
+{{--                        <h2 class="font-DanaMedium text-lg mb-1">--}}
+{{--                            عطر و طعم قهوه عالی--}}
+{{--                        </h2>--}}
+{{--                        <span--}}
+{{--                            class="px-2 py-1 mb-2 rounded-lg bg-green-500 text-white text-xs"--}}
+{{--                        >خریدار</span--}}
+{{--                        >--}}
+{{--                    </div>--}}
+{{--                    <!-- COOMENT TEXT -->--}}
+{{--                    <div class="flex-col">--}}
+{{--                        <h2--}}
+{{--                            class="flex items-center gap-x-1 text-green-500 mb-4"--}}
+{{--                        >--}}
+{{--                            <svg class="w-4 h-4">--}}
+{{--                                <use href="#hand-up"></use>--}}
+{{--                            </svg>--}}
+{{--                            پیشنهاد میشود--}}
+{{--                        </h2>--}}
+{{--                        <p--}}
+{{--                            class="text-gray-500 dark:text-gray-200 mb-2 line-clamp-2"--}}
+{{--                        >--}}
+{{--                            عالی از هر لحاظ به شدت خریدش رو توصیه میکنم--}}
+{{--                            کیفیت محصول خوب بود بسته بندی عالی بود--}}
+{{--                        </p>--}}
+{{--                    </div>--}}
+{{--                    <!-- COMMENT FOOTER -->--}}
+{{--                    <div--}}
+{{--                        class="mt-2 lg:mt-0 flex-col lg:flex-row gap-y-2 lg:items-center justify-between"--}}
+{{--                    >--}}
+{{--                        <div--}}
+{{--                            class="flex items-center gap-x-4 text-gray-400 text-sm"--}}
+{{--                        >--}}
+{{--                            <p>11 بهمن 1402</p>--}}
+{{--                            <p>امیررضا کریمی</p>--}}
+{{--                        </div>--}}
+{{--                        <div--}}
+{{--                            class="flex items-center gap-x-2 flex-wrap mt-2"--}}
+{{--                        >--}}
+{{--                            <p class="text-gray-400 text-sm">--}}
+{{--                                آیا این دیدگاه برایتان مفید بود؟--}}
+{{--                            </p>--}}
+{{--                            <div--}}
+{{--                                class="flex items-center gap-x-2 child:flex child:items-center child:gap-x-1 child:rounded-lg child:p-2 child:font-DanaMedium child:duration-300 child:transition-all child:text-sm"--}}
+{{--                            >--}}
+{{--                                <button--}}
+{{--                                    class="text-green-600 ring-transparent ring-1 focus:ring-green-600 dark:focus:ring-green-600"--}}
+{{--                                >--}}
+{{--                                    78--}}
+{{--                                    <svg class="w-4 h-4">--}}
+{{--                                        <use href="#hand-up"></use>--}}
+{{--                                    </svg>--}}
+{{--                                </button>--}}
+{{--                                <button--}}
+{{--                                    class="text-red-500 ring-transparent ring-1 focus:ring-[#EF4343] dark:focus:ring-[#EF4343]"--}}
+{{--                                >--}}
+{{--                                    25--}}
+{{--                                    <svg class="w-4 h-4">--}}
+{{--                                        <use href="#hand-down"></use>--}}
+{{--                                    </svg>--}}
+{{--                                </button>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </li>--}}
+{{--                <!-- COMMENT ITEMS -->--}}
+{{--                <li--}}
+{{--                    class="hidden-comment-item hidden child:flex py-4 border-b border-gray-200 child:border-white/20"--}}
+{{--                >--}}
+{{--                    <!-- TITLE -->--}}
+{{--                    <div class="flex items-center gap-x-2">--}}
+{{--                        <h2 class="font-DanaMedium text-lg mb-1">--}}
+{{--                            بسته بندی خوب نبود--}}
+{{--                        </h2>--}}
+{{--                        <span--}}
+{{--                            class="px-2 py-1 mb-2 rounded-lg bg-green-500 text-white text-xs"--}}
+{{--                        >خریدار</span--}}
+{{--                        >--}}
+{{--                    </div>--}}
+{{--                    <!-- COOMENT TEXT -->--}}
+{{--                    <div class="flex-col">--}}
+{{--                        <h2--}}
+{{--                            class="flex items-center gap-x-1 text-red-500 mb-4"--}}
+{{--                        >--}}
+{{--                            <svg class="w-4 h-4">--}}
+{{--                                <use href="#hand-down"></use>--}}
+{{--                            </svg>--}}
+{{--                            پیشنهاد نمیشود--}}
+{{--                        </h2>--}}
+{{--                        <p--}}
+{{--                            class="text-gray-500 dark:text-gray-200 mb-2"--}}
+{{--                        >--}}
+{{--                            بسته بندی محصول ایراد داشت.--}}
+{{--                        </p>--}}
+{{--                    </div>--}}
+{{--                    <!-- COMMENT FOOTER -->--}}
+{{--                    <div--}}
+{{--                        class="mt-2 lg:mt-0 flex-col lg:flex-row gap-y-2 lg:items-center justify-between"--}}
+{{--                    >--}}
+{{--                        <div--}}
+{{--                            class="flex items-center gap-x-4 text-gray-400 text-sm"--}}
+{{--                        >--}}
+{{--                            <p>12 بهمن 1402</p>--}}
+{{--                            <p>علی محمدی</p>--}}
+{{--                        </div>--}}
+{{--                        <div--}}
+{{--                            class="flex items-center gap-x-2 flex-wrap mt-2"--}}
+{{--                        >--}}
+{{--                            <p class="text-gray-400 text-sm">--}}
+{{--                                آیا این دیدگاه برایتان مفید بود؟--}}
+{{--                            </p>--}}
+{{--                            <div--}}
+{{--                                class="flex items-center gap-x-2 child:flex child:items-center child:gap-x-1 child:rounded-lg child:p-2 child:font-DanaMedium child:duration-300 child:transition-all child:text-sm"--}}
+{{--                            >--}}
+{{--                                <button--}}
+{{--                                    class="text-green-600 ring-transparent ring-1 focus:ring-green-600 dark:focus:ring-green-600"--}}
+{{--                                >--}}
+{{--                                    4--}}
+{{--                                    <svg class="w-4 h-4">--}}
+{{--                                        <use href="#hand-up"></use>--}}
+{{--                                    </svg>--}}
+{{--                                </button>--}}
+{{--                                <button--}}
+{{--                                    class="text-red-500 ring-transparent ring-1 focus:ring-[#EF4343] dark:focus:ring-[#EF4343]"--}}
+{{--                                >--}}
+{{--                                    15--}}
+{{--                                    <svg class="w-4 h-4">--}}
+{{--                                        <use href="#hand-down"></use>--}}
+{{--                                    </svg>--}}
+{{--                                </button>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </li>--}}
+{{--                <!-- COMMENT ITEMS -->--}}
+{{--                <li--}}
+{{--                    class="hidden-comment-item hidden child:flex py-4 border-b border-gray-200 child:border-white/20"--}}
+{{--                >--}}
+{{--                    <!-- TITLE -->--}}
+{{--                    <div class="flex items-center gap-x-2">--}}
+{{--                        <h2 class="font-DanaMedium text-lg mb-1">--}}
+{{--                            برشته و تازه بود--}}
+{{--                        </h2>--}}
+{{--                        <span--}}
+{{--                            class="px-2 py-1 mb-2 rounded-lg bg-green-500 text-white text-xs"--}}
+{{--                        >خریدار</span--}}
+{{--                        >--}}
+{{--                    </div>--}}
+{{--                    <!-- COOMENT TEXT -->--}}
+{{--                    <div class="flex-col">--}}
+{{--                        <h2--}}
+{{--                            class="flex items-center gap-x-1 text-green-500 mb-4"--}}
+{{--                        >--}}
+{{--                            <svg class="w-4 h-4">--}}
+{{--                                <use href="#hand-up"></use>--}}
+{{--                            </svg>--}}
+{{--                            پیشنهاد میشود--}}
+{{--                        </h2>--}}
+{{--                        <p--}}
+{{--                            class="text-gray-500 dark:text-gray-200 mb-2"--}}
+{{--                        >--}}
+{{--                            کیفیت محصول عالیه--}}
+{{--                        </p>--}}
+{{--                    </div>--}}
+{{--                    <!-- COMMENT FOOTER -->--}}
+{{--                    <div--}}
+{{--                        class="mt-2 lg:mt-0 flex-col lg:flex-row gap-y-2 lg:items-center justify-between"--}}
+{{--                    >--}}
+{{--                        <div--}}
+{{--                            class="flex items-center gap-x-4 text-gray-400 text-sm"--}}
+{{--                        >--}}
+{{--                            <p>1 بهمن 1402</p>--}}
+{{--                            <p>محمد صفدری</p>--}}
+{{--                        </div>--}}
+{{--                        <div--}}
+{{--                            class="flex items-center gap-x-2 flex-wrap mt-2"--}}
+{{--                        >--}}
+{{--                            <p class="text-gray-400 text-sm">--}}
+{{--                                آیا این دیدگاه برایتان مفید بود؟--}}
+{{--                            </p>--}}
+{{--                            <div--}}
+{{--                                class="flex items-center gap-x-2 child:flex child:items-center child:gap-x-1 child:rounded-lg child:p-2 child:font-DanaMedium child:duration-300 child:transition-all child:text-sm"--}}
+{{--                            >--}}
+{{--                                <button--}}
+{{--                                    class="text-green-600 ring-transparent ring-1 focus:ring-green-600 dark:focus:ring-green-600"--}}
+{{--                                >--}}
+{{--                                    7--}}
+{{--                                    <svg class="w-4 h-4">--}}
+{{--                                        <use href="#hand-up"></use>--}}
+{{--                                    </svg>--}}
+{{--                                </button>--}}
+{{--                                <button--}}
+{{--                                    class="text-red-500 ring-transparent ring-1 focus:ring-[#EF4343] dark:focus:ring-[#EF4343]"--}}
+{{--                                >--}}
+{{--                                    5--}}
+{{--                                    <svg class="w-4 h-4">--}}
+{{--                                        <use href="#hand-down"></use>--}}
+{{--                                    </svg>--}}
+{{--                                </button>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </li>--}}
                 <button
                     class="more-comment-btn w-full flex items-center justify-center gap-x-1 my-4 text-green-600 font-DanaMedium"
                 >

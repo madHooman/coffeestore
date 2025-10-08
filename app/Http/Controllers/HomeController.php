@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\Category;
+use App\Models\Comment;
 use App\Models\Product;
 use function Laravel\Prompts\select;
 
@@ -80,8 +81,9 @@ class HomeController extends Controller
         $categories = Category::select('images', 'productTitle')->get();
         $articles= Article::select('title','img_slider', 'body')->get();
         $products = Product::select('images','product_title', 'product_price')->get();
+        $comments = Comment::select('tittle' , 'description' ,'user_name')->get();
         return view('master.product-details'
-            , ['categories' => $categories ,'articles'=> $articles ,'products'=>$products]);
+            , ['categories' => $categories ,'articles'=> $articles ,'products'=>$products,'comments'=>$comments]);
 
     }
 

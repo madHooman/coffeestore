@@ -17,7 +17,9 @@ class CommentSeeder extends Seeder
             [
                 'user_id' => 1,
                 'product_id' => 2,
-                'comment' => 'این محصول عالیه!',
+                'tittle' => 'این محصول عالیه!',
+                'description'=>'',
+                'user_name'=>'',
                 'date' => Carbon::now(),
             ],
             [
