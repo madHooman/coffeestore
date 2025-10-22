@@ -1,5 +1,5 @@
-# Base image: PHP 7.4 + Apache
-FROM php:7.4-apache
+# Base image: PHP 8.2 + Apache
+FROM php:8.2-apache
 
 # Set working directory
 WORKDIR /var/www/html
@@ -17,13 +17,13 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     && docker-php-ext-install pdo_mysql mbstring zip exif pcntl bcmath gd
 
-# Enable Apache mod_rewrite (for Laravel routes)
+# Enable Apache mod_rewrite
 RUN a2enmod rewrite
 
-# Install Composer (latest stable)
+# Install Composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
-# Copy project files into container
+# Copy project
 COPY . .
 
 # Allow Composer to run as root and install dependencies
@@ -33,11 +33,11 @@ RUN composer install --no-dev --optimize-autoloader --no-interaction
 # Set permissions for Laravel
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
-# Generate Laravel app key
+# Generate app key
 RUN php artisan key:generate || true
 
-# Expose port 10000 (Render maps it to 80)
+# Expose port (Railway maps automatically)
 EXPOSE 10000
 
-# Start Apache in foreground
+# Start Apache
 CMD ["apache2-foreground"]
