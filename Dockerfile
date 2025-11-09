@@ -1,29 +1,21 @@
-# Base image: PHP 8.2 + Apache
+# Use PHP 8.2 with Apache
 FROM php:8.2-apache
-
-# Set working directory
-WORKDIR /var/www/html
 
 # Install system dependencies and PHP extensions
 RUN apt-get update && apt-get install -y \
-    git \
-    unzip \
-    zip \
-    libpng-dev \
-    libjpeg-dev \
-    libfreetype6-dev \
-    libonig-dev \
-    libxml2-dev \
-    libzip-dev \
+    git unzip zip libpng-dev libjpeg-dev libfreetype6-dev libonig-dev libxml2-dev libzip-dev \
     && docker-php-ext-install pdo_mysql mbstring zip exif pcntl bcmath gd
 
 # Enable Apache mod_rewrite
 RUN a2enmod rewrite
 
-# Install Composer
+# Copy Composer from the Composer image
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
-# Copy project
+# Set working directory
+WORKDIR /var/www/html
+
+# Copy project files
 COPY . .
 
 # Allow Composer to run as root and install dependencies
@@ -33,11 +25,8 @@ RUN composer install --no-dev --optimize-autoloader --no-interaction
 # Set permissions for Laravel
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
-# Generate app key
-RUN php artisan key:generate || true
-
-# Expose port (Railway maps automatically)
-EXPOSE 10000
+# Expose port 80
+EXPOSE 80
 
 # Start Apache
 CMD ["apache2-foreground"]
